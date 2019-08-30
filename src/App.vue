@@ -121,6 +121,6 @@ a {
 
 @font-face {
   font-family: 'VinerHand';
-  src: url('../src/assets/fonts/vineritc.ttf');
+  src: url('/assets/fonts/vineritc.ttf');
 }
 </style>
