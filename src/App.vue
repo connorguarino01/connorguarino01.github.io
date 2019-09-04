@@ -6,8 +6,6 @@
 
 <script>
 
-import '../dist/fonts/vineritc.ttf'
-
 export default {
   name: 'app',
   data () {
@@ -121,8 +119,11 @@ a {
     --blackoverlay: rgba(0,0,0,0.3);
 }
 
+$font-dir: "/fonts/";
+
 @font-face {
   font-family: 'VinerHand';
-  src: url('../dist/fonts/vineritc.ttf') format('truetype');
+  src: url('./assets/fonts/vineritc.ttf') format('truetype');
+  src: url('#{$font-dir}/vineritc.ttf') format('truetype');
 }
 </style>
