@@ -11,6 +11,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import VueRouter from 'vue-router'
 import Home from './Home.vue'
 import Etsy from './Etsy.vue'
+import VinerHand from './assets/fonts/vineritc.ttf'
 
 library.add(faEtsy, faFacebookF, faTumblr, faRedbubble, faPinterestP, faInstagram)
 
@@ -28,6 +29,12 @@ const routes = [
 const router = new VueRouter({
     routes,
     mode: 'history'
+})
+
+const spanClass = jss.createStyleSheet({
+    span: {
+        'font-family': VinerHand,
+    }
 })
 
 new Vue({

@@ -6,6 +6,8 @@
 
 <script>
 
+import './assets/fonts/vineritc.ttf'
+
 export default {
   name: 'app',
   data () {
@@ -71,7 +73,7 @@ export default {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'VinerHand','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -121,6 +123,6 @@ a {
 
 @font-face {
   font-family: 'VinerHand';
-  src: url('src/fonts/vineritc.ttf') format('truetype');
+  src: url('./assets/fonts/vineritc.ttf') format('truetype');
 }
 </style>
