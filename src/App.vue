@@ -6,7 +6,7 @@
 
 <script>
 
-import './assets/fonts/vineritc.ttf'
+import '../dist/fonts/vineritc.ttf'
 
 export default {
   name: 'app',
@@ -123,6 +123,6 @@ a {
 
 @font-face {
   font-family: 'VinerHand';
-  src: url('./assets/fonts/vineritc.ttf') format('truetype');
+  src: url('../dist/fonts/vineritc.ttf') format('truetype');
 }
 </style>

@@ -11,7 +11,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import VueRouter from 'vue-router'
 import Home from './Home.vue'
 import Etsy from './Etsy.vue'
-import VinerHand from './assets/fonts/vineritc.ttf'
+import VinerHand from '../dist/fonts/vineritc.ttf'
 
 library.add(faEtsy, faFacebookF, faTumblr, faRedbubble, faPinterestP, faInstagram)
 
