@@ -31,12 +31,6 @@ const router = new VueRouter({
     mode: 'history'
 })
 
-const spanClass = jss.createStyleSheet({
-    span: {
-        'font-family': VinerHand,
-    }
-})
-
 new Vue({
     el: '#app',
     render: h => h(App),
