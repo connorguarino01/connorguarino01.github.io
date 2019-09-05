@@ -10,7 +10,12 @@
     </div>
     <div class="column-center">
       <div id="branding">
-        <img id="logo" src="/src/assets/images/stagpathlogo-transparency.png">
+        <div id="branding-wrapper">
+          <img id="logo" src="/src/assets/images/stagpathlogo-transparency.png">
+          <div id="site-title">
+            <h1>StagPath</h1>
+          </div>
+        </div>
       </div>
       <div id="social">
         <div class="social-row" id="media">
@@ -47,6 +52,7 @@
 
 .column-center {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 60%;
   height: 100%;
@@ -63,6 +69,33 @@
   flex-direction: column;
   width: 100%;
   height: 80%;
+  align-items: center;
+}
+
+#branding-wrapper {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+}
+
+#site-title {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: auto;
+}
+
+#site-title > h1 {
+  margin-top: 50%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #logo {
