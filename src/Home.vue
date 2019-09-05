@@ -2,10 +2,10 @@
   <div id="site">
     <div class="column-side">
       <div class="nav-container" id="shop-etsy">
-        <h2>Etsy</h2>
+        <router-link to="/etsy"><h2>Etsy</h2></router-link>
       </div>
       <div class="nav-container" id="support">
-        <h2>Support</h2>
+        <router-link to="/support"><h2>Support</h2></router-link>
       </div>
     </div>
     <div class="column-center">
@@ -33,10 +33,10 @@
     </div>
     <div class="column-side">
       <div class="nav-container" id="shop-redbubble">
-        <h2>Redbubble</h2>
+        <router-link to="/redbubble"><h2>Redbubble</h2></router-link>
       </div>
       <div class="nav-container" id="about">
-        <h2>About</h2>
+        <router-link to="/about"><h2>About</h2></router-link>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@ li {
 }
 
 a {
-  color: #42b983;
+  text-decoration: none;
 }
 
 :root {
