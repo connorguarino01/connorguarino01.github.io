@@ -14,10 +14,12 @@ import Etsy from './Etsy.vue'
 import Redbubble from './Redbubble.vue'
 import About from './About.vue'
 import Support from './Support.vue'
+import SubModal from './SubModal.vue'
 
 library.add(faEtsy, faFacebookF, faTumblr, faRedbubble, faPinterestP, faInstagram)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('submodal', SubModal)
 
 Vue.use(VueRouter)
 

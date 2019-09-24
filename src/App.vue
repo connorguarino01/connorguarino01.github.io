@@ -9,10 +9,5 @@ import './assets/fonts/vineritc.ttf'
 
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
 }
 </script>

@@ -1,5 +1,8 @@
 <template>
   <div id="site">
+    <div id="submodal">
+      <submodal v-if="submodalstatus"/>
+    </div>
     <img id="site-background" src="./assets/images/home-background - ps2.jpg">
     <div class="column-side">
       <div class="nav-container left" id="shop-etsy">
@@ -29,7 +32,7 @@
         </div>
         <div class="social-row" id="email">
           <h3><span>Contact: businessjen1@gmail.com</span></h3>
-          <button type="button" id="sub-button"><h3><span>Subscribe</span></h3></button>
+          <button id="sub-button" v-on:click="submodalstatus = true"><h3><span>Subscribe</span></h3></button>
         </div>
       </div>
     </div>
@@ -277,3 +280,13 @@ span {
   src: url('/dist/fonts/vineritc.ttf') format('truetype');
 }
 </style>
+
+<script>
+export default {
+  data: function() {
+    return {
+      submodalstatus: false
+    }
+  }
+}
+</script>
