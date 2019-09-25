@@ -8,6 +8,7 @@ import { faTumblr } from '@fortawesome/free-brands-svg-icons'
 import { faRedbubble } from '@fortawesome/free-brands-svg-icons'
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import VueRouter from 'vue-router'
 import Home from './Home.vue'
 import Etsy from './Etsy.vue'
@@ -16,7 +17,7 @@ import About from './About.vue'
 import Support from './Support.vue'
 import SubModal from './SubModal.vue'
 
-library.add(faEtsy, faFacebookF, faTumblr, faRedbubble, faPinterestP, faInstagram)
+library.add(faEtsy, faFacebookF, faTumblr, faRedbubble, faPinterestP, faInstagram, faTimes)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('submodal', SubModal)

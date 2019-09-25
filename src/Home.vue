@@ -1,7 +1,15 @@
 <template>
   <div id="site">
-    <div id="submodal">
-      <submodal v-if="submodalstatus"/>
+    <div id="submodal" v-if="submodalstatus">
+      <div id="submodal-wrapper">
+        <div id="submodal-header">
+          <h2>Subscribe</h2>
+          <button type="button" id="sub-button-close" v-on:click="submodalstatus = false">
+            <font-awesome-icon :icon="['fas','times']" />    
+          </button>
+        </div>
+        <submodal v-if="submodalstatus"/>
+      </div>
     </div>
     <img id="site-background" src="./assets/images/home-background - ps2.jpg">
     <div class="column-side">
@@ -23,16 +31,28 @@
       </div>
       <div id="social">
         <div class="social-row" id="media">
-          <font-awesome-icon :icon="['fab','etsy']" />
-          <font-awesome-icon :icon="['fab','facebook-f']" />
-          <font-awesome-icon :icon="['fab','instagram']" />  
-          <font-awesome-icon :icon="['fab','pinterest-p']" />
-          <font-awesome-icon :icon="['fab','redbubble']" />
-          <font-awesome-icon :icon="['fab','tumblr']" />        
+          <a href="https://www.etsy.com/shop/StagPath" target="_blank">
+            <font-awesome-icon :icon="['fab','etsy']" />
+          </a>
+          <a href="https://www.facebook.com/StagPath/" target="_blank">
+            <font-awesome-icon :icon="['fab','facebook-f']" />
+          </a>
+          <a href="https://www.instagram.com/stagpath/" target="_blank">
+            <font-awesome-icon :icon="['fab','instagram']" />
+          </a>
+          <a href="https://www.pinterest.com/stagpath/" target="_blank">  
+            <font-awesome-icon :icon="['fab','pinterest-p']" />
+          </a>
+          <a href="https://www.redbubble.com/people/StagPath" target="_blank">
+            <font-awesome-icon :icon="['fab','redbubble']" />
+          </a>
+          <a href="https://www.tumblr.com/blog/stagpathcreates/" target="_blank">
+            <font-awesome-icon :icon="['fab','tumblr']" />
+          </a>        
         </div>
         <div class="social-row" id="email">
-          <h3><span>Contact: businessjen1@gmail.com</span></h3>
-          <button id="sub-button" v-on:click="submodalstatus = true"><h3><span>Subscribe</span></h3></button>
+          <a href="mailto:businessjen1@gmail.com"> <h3><span>Contact: businessjen1@gmail.com</span></h3> </a>
+          <button id="sub-button-open" v-on:click="submodalstatus = true"><h3><span>Subscribe</span></h3></button>
         </div>
       </div>
     </div>
@@ -69,8 +89,9 @@
   height: 50%;
 }
 
-.nav-container > a {
-  min-width: 8rem;
+.nav-container > a > h2 > span:hover {
+  background-color: white;
+  color: var(--stag-green);
 }
 
 .right {
@@ -84,21 +105,29 @@
 #shop-etsy > a {
   margin-left: var(--nav-hoffset);
   margin-top: var(--nav-voffset1);
+  margin-bottom: auto;
+  margin-right: auto;
 }
 
 #support > a {
   margin-left: var(--nav-hoffset);
   margin-top: var(--nav-voffset2);
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 #shop-redbubble > a {
   margin-right: var(--nav-hoffset);
   margin-top: var(--nav-voffset1);
+  margin-left: auto;
+  margin-bottom: auto;
 }
 
 #about > a {
   margin-right: var(--nav-hoffset);
   margin-top: var(--nav-voffset2);
+  margin-left: auto;
+  margin-bottom: auto;
 }
 
 #branding {
@@ -156,12 +185,18 @@
   justify-content: space-evenly;
 }
 
-#media > svg {
+#media > a > svg {
   width: 2rem;
   height: 2rem;
   padding: 0.25em;
   border-radius: 50%;
   background-color: var(--blackoverlay);
+  color: white;
+}
+
+#media > a > svg:hover {
+  background-color: white;
+  color: var(--stag-green);
 }
 
 .social-row {
@@ -174,7 +209,71 @@
   align-items: center;
 }
 
-#sub-button {
+#email > a > h3 > span:hover {
+  background-color: white;
+  color: var(--stag-green);
+}
+
+#submodal {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: var(--blackoverlay);
+  color: white;
+  justify-content: center;
+}
+
+#submodal-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  padding: 1.5em;
+  background-color: var(--stag-green);
+  border-radius: 2em;
+  border-width: 0.25em;
+  border-color: white;
+  border-style: dashed;
+}
+
+#submodal-header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  border-style: dashed;
+  border-bottom-width: 0.25em;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-color: white;
+}
+
+#submodal-header > h2 {
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  height: auto;
+}
+
+#sub-button-close {
+  display: inline-block;
+  position: relative;
+  width: 10%;
+  height: 60%;
+  margin-bottom: auto;
+  background-color: transparent;
+  color: white;
+}
+
+#sub-button-close > svg {
+  font-size: 2rem;
+}
+
+#sub-button-open {
   display: flex;
   position: relative;
   background: transparent;
@@ -182,6 +281,11 @@
   font-weight: 400;
   font-size: 1em;
   margin-left: 0.5em;
+}
+
+#sub-button-open > h3 > span:hover {
+  background-color:white;
+  color: var(--stag-green);
 }
 
 #site {
