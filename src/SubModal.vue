@@ -52,6 +52,7 @@
   border-style: dashed;
   border-color: white;
   background-color: transparent;
+  color: white;
 }
 
 .mc-field-group > label{
